@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class DistanceConverter {
     public static void main(String[] args) {
         // TODO: Implement distance converter
@@ -7,5 +9,57 @@ public class DistanceConverter {
         // - Use conversion factor: 1 mile = 1.60935 kilometers
         // - Display conversion results
         // - Handle invalid menu choices
+        boolean run=true;
+        Scanner sc = new Scanner(System.in);
+        // run until user stops
+        while(run){
+            System.out.println("--- Distance Menu ---");
+            System.out.println("1: Miles to Kilometers");
+            System.out.println("2: Kilometers to Miles");
+            System.out.println("3: Exit");
+            System.out.print("Enter a choice:  ");
+            int choice = sc.nextInt();
+
+            switch(choice) {
+                case 1: // miles to kilometers, multiply
+                {
+                    System.out.print("\nDistance in miles: ");
+                    double miles = sc.nextDouble();
+
+                    System.out.println("\nMiles: " + miles);
+                    if(miles>0)
+                    {
+                        double kilometers = miles * 1.60935;
+                        System.out.println("kilometers: " + kilometers);
+                    }
+                    else {
+                        System.out.println("Invalid input.");
+                    }
+                    break;
+                }
+                case 2: { // kilometers to miles, divide
+                    System.out.print("\nDistance in kilometers: ");
+                    double kilometers = sc.nextDouble();
+
+                    System.out.println("\nKilometers: " + kilometers);
+                    if(kilometers>0)
+                    {
+                        double miles = kilometers / 1.60935;
+                        System.out.println("In miles: " + miles);
+                    }
+                    else {
+                        System.out.println("Invalid input.");
+                    }
+                    break;
+                }
+                case 3: {
+                    System.out.println("Exiting Menu");
+                    run = false;
+                    break;
+                }
+                default:
+                    System.out.println("Invalid option.");
+            }
+        }
     }
 }
