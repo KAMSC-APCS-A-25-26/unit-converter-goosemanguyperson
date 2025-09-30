@@ -13,39 +13,40 @@ public class DistanceConverter {
         Scanner sc = new Scanner(System.in);
         // run until user stops
         while(run){
-            System.out.println("--- Distance Menu ---");
-            System.out.println("1: Miles to Kilometers");
-            System.out.println("2: Kilometers to Miles");
-            System.out.println("3: Exit");
-            System.out.print("Enter a choice:  ");
+            System.out.println("Choose conversion direction");
+            System.out.println("1. Convert Miles to Kilometers");
+            System.out.println("2. Convert Kilometers to Miles");
+            System.out.println("3. Exit");
+            System.out.print("\nEnter your choice (1, 2, or 3): ");
             int choice = sc.nextInt();
 
             switch(choice) {
                 case 1: // miles to kilometers, multiply
                 {
-                    System.out.print("\nDistance in miles: ");
+                    System.out.print("Enter distance in miles: ");
                     double miles = sc.nextDouble();
 
-                    System.out.println("\nMiles: " + miles);
+                    System.out.println("\nConversion Results:\nMiles: " + miles);
                     if(miles>0)
                     {
                         double kilometers = miles * 1.60935;
-                        System.out.println("kilometers: " + kilometers);
+                        System.out.println("Kilometers: " + kilometers);
                     }
                     else {
                         System.out.println("Invalid input.");
                     }
                     break;
                 }
+
                 case 2: { // kilometers to miles, divide
-                    System.out.print("\nDistance in kilometers: ");
+                    System.out.print("Enter distance in kilometers: ");
                     double kilometers = sc.nextDouble();
 
-                    System.out.println("\nKilometers: " + kilometers);
+                    System.out.println("Conversion Results:\nKilometers: " + kilometers);
                     if(kilometers>0)
                     {
                         double miles = kilometers / 1.60935;
-                        System.out.println("In miles: " + miles);
+                        System.out.println("Miles: " + miles);
                     }
                     else {
                         System.out.println("Invalid input.");
@@ -53,7 +54,7 @@ public class DistanceConverter {
                     break;
                 }
                 case 3: {
-                    System.out.println("Exiting Menu");
+                    System.out.println("Goodbye!");
                     run = false;
                     break;
                 }

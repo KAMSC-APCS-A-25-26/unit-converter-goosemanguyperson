@@ -13,20 +13,20 @@ public class TempConverter {
         Scanner sc = new Scanner(System.in);
 
         while(run){
-            System.out.println("--- Temperature Menu ---");
-            System.out.println("1: Fahrenheit to Celsius");
-            System.out.println("2: Celsius to Fahrenheit");
-            System.out.println("3: Exit");
-            System.out.print("Enter a choice:  ");
+            System.out.println("Choose conversion direction:");
+            System.out.println("1. Convert Fahrenheit to Celsius");
+            System.out.println("2. Convert Celsius to Fahrenheit");
+            System.out.println("3. Exit");
+            System.out.print("\nEnter your choice (1, 2, or 3): ");
             int choice = sc.nextInt();
 
             switch(choice) {
                 case 1: // F to C: (F - 32) * 5/9
                 {
-                    System.out.print("\nTemperature in Fahrenheit: ");
+                    System.out.print("Enter temperature in Fahrenheit: ");
                     double fahrenheit = sc.nextDouble();
 
-                    System.out.println("\nFahrenheit: " + fahrenheit);
+                    System.out.println("\nConversion Results:\nFahrenheit: " + fahrenheit);
                     if(fahrenheit >= -459.67)
                     {
                         double celsius = (fahrenheit-32) * 5 / 9;
@@ -38,10 +38,10 @@ public class TempConverter {
                     break;
                 }
                 case 2: { // C to F: C * 9/5 + 32
-                    System.out.print("\nTemperature in Celsius: ");
+                    System.out.print("Enter temperature in Celsius: ");
                     double celsius = sc.nextDouble();
 
-                    System.out.println("\nCelsius: " + celsius);
+                    System.out.println("Conversion Results:\nCelsius: " + celsius);
                     if(celsius >= -273.15)
                     {
                         double fahrenheit = celsius * 9 / 5 + 32;
@@ -53,7 +53,7 @@ public class TempConverter {
                     break;
                 }
                 case 3: {
-                    System.out.println("Exiting Menu");
+                    System.out.println("Goodbye!");
                     run = false;
                     break;
                 }
