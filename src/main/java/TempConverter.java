@@ -33,7 +33,7 @@ public class TempConverter {
                         System.out.println("Celsius: " + celsius);
                     }
                     else {
-                        System.out.println("Invalid input.");
+                        System.out.println("Invalid choice");
                     }
                     break;
                 }
@@ -48,7 +48,7 @@ public class TempConverter {
                         System.out.println("Fahrenheit: " + fahrenheit);
                     }
                     else {
-                        System.out.println("Invalid input.");
+                        System.out.println("Invalid choice");
                     }
                     break;
                 }
@@ -58,7 +58,7 @@ public class TempConverter {
                     break;
                 }
                 default:
-                    System.out.println("Invalid option.");
+                    System.out.println("Invalid choice");
             }
         }
     }

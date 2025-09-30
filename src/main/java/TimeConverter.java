@@ -1,4 +1,4 @@
-import java.util.Objects;
+import java.util.Objects; // automatically appeared idk what its for lol
 import java.util.Scanner;
 public class TimeConverter {
     public static void main(String[] args) {
@@ -31,6 +31,7 @@ public class TimeConverter {
             System.out.print("\nDo you want to convert another time? (y/n): ");
             if(!Objects.equals(sc.next(), "y"))
                 run=false;
+                System.out.println("Goodbye!");
         }
     }
 }
