@@ -30,7 +30,7 @@ public class DistanceConverter {
                     if(miles>0)
                     {
                         double kilometers = miles * 1.60935;
-                        System.out.println("Kilometers: " + kilometers);
+                        System.out.println("km Kilometers: " + kilometers);
                     }
                     else {
                         System.out.println("Invalid choice");
