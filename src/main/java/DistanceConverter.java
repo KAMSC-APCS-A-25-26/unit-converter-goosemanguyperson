@@ -30,7 +30,7 @@ public class DistanceConverter {
                     if(miles>0)
                     {
                         double kilometers = miles * 1.60935;
-                        System.out.println("kilometers: " + kilometers);
+                        System.out.println("Kilometers: " + kilometers);
                     }
                     else {
                         System.out.println("Invalid choice");
@@ -42,11 +42,11 @@ public class DistanceConverter {
                     System.out.print("Enter distance in kilometers: ");
                     double kilometers = sc.nextDouble();
 
-                    System.out.println("Conversion Results:\nkilometers: " + kilometers);
+                    System.out.println("Conversion Results:\nKilometers: " + kilometers);
                     if(kilometers>0)
                     {
                         double miles = kilometers / 1.60935;
-                        System.out.println("miles: " + miles);
+                        System.out.println("Miles: " + miles);
                     }
                     else {
                         System.out.println("Invalid choice");
@@ -59,7 +59,7 @@ public class DistanceConverter {
                     break;
                 }
                 default:
-                    System.out.println("Invalid choice");
+                    System.out.println("Invalid choice\nPlease enter 1, 2, or 3");
             }
         }
     }

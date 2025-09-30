@@ -58,7 +58,7 @@ public class TempConverter {
                     break;
                 }
                 default:
-                    System.out.println("Invalid choice");
+                    System.out.println("Invalid choice\nPlease enter 1, 2, or 3");
             }
         }
     }
